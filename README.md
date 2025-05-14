@@ -26,12 +26,14 @@
 ### 🔗 Live Demo & Pitch
 
 <div align="center">
-  <a href="https://axioschat-r2jy.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Try_AxiosChat-Live_Demo-4E56A6?style=for-the-badge&logo=vercel" alt="Live Demo" />
+  <a href="https://drive.google.com/file/d/1wBLxTT3W-oJFBKbAuxZ1CaDqr312HJK_/view?usp=sharing" target="_blank">
+    <img src="https://img.shields.io/badge/Try_AxiosChat-Live_Demo-4E56A6?style=for-the-badge&logo=vercel" alt="Demo Video" />
   </a>
 </div>
 
 > **Note:** AI functionality may be limited on the live demo due to API key constraints.
+>
+> **Updated Demo Video:** This link now points to the original, full-featured demo showcasing how the Gaia network is utilized within AxiosChat. The previous HackQuest video was a temporary placeholder created against a tight deadline; this original version reflects our complete vision.
 
 ## ✨ Key Features & Recent Enhancements
 
@@ -179,7 +181,7 @@ graph TD;
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/OkeyAmy/Axioschat.git
+   git clone https://github.com/OkeyAmy/axioschat-gaia.git
    cd Axioschat
    ```
 
@@ -290,3 +292,5 @@ This project is licensed under the [MIT License](LICENSE).
     <a href="https://github.com/OkeyAmy/AxiosChat/issues">Request Feature</a>
   </p>
 </div>
+
+## The Deomo video is the uppadted video for the AxoisChat demo destrating how gaia network it ustlized in the application 
