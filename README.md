@@ -65,13 +65,24 @@
 * **Fallback Mechanisms**: The UI gracefully degrades if optional dependencies (like animation libraries) fail to load, ensuring core functionality remains.
 * **Stable Component Architecture**: Refactored key components (`ChatMessages`, `SuggestedPromptsPanel`, `Chat` page) for maximum stability and resilience.
 
+
+
 ### 🧠 AI Strategy
 
-* **Multi-Model Approach**: Leverages OpenAI's powerful models for conversation and specialized Web3 models (like Flock) for precise function execution.
-* **Qwen Integration Powered by Gaia AI**: Now featuring Qwen LLM integration through the Gaia AI decentralized platform for enhanced performance and reduced latency.
-* **Configurable AI Backend**: Flexible API integration system allows you to choose your preferred AI provider.
-* **Context-Aware Processing**: The system intelligently maintains conversation context to provide more relevant and accurate responses.
-* **Optimized Prompting**: Carefully crafted system prompts ensure the AI provides accurate Web3 information and function calls.
+* **Multi-Model Approach**: Utilizes OpenAI's SDK for conversational tasks alongside specialized Web3 models (like Flock) to execute on-chain functions with precision.
+* **Qwen Integration via Gaia AI**: Integrates the Qwen LLM (`qwen72b`) through the Gaia AI decentralized platform, enhancing performance, scalability, and native interaction with Web3 protocols.
+* **Configurable AI Backend**: Offers a flexible API backend that allows switching between local AI nodes and public domain nodes depending on your infrastructure preference.
+* **Context-Aware Processing**: Maintains and leverages conversation history for more coherent, accurate, and contextually relevant responses.
+* **Optimized Prompting**: System prompts are fine-tuned to deliver reliable Web3 data and ensure precise execution of smart contract-related functions.
+
+---
+
+### 🛠️ Suggested Fix (Platform-Level)
+
+> **Increase the latency tolerance of the `qwen72b` model.**
+> The current configuration may be too strict or optimized for low-latency responses, which could result in truncated outputs or failed executions under load. Adjusting the system to accommodate slightly higher latency would allow the model to fully utilize its reasoning capabilities—especially for complex Web3 interactions.
+
+
 
 ## 🏆 Why AxiosChat Stands Out
 
