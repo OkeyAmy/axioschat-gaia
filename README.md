@@ -66,6 +66,7 @@
 ### 🧠 AI Strategy
 
 * **Multi-Model Approach**: Leverages OpenAI's powerful models for conversation and specialized Web3 models (like Flock) for precise function execution.
+* **Qwen Integration Powered by Gaia AI**: Now featuring Qwen LLM integration through the Gaia AI decentralized platform for enhanced performance and reduced latency.
 * **Configurable AI Backend**: Flexible API integration system allows you to choose your preferred AI provider.
 * **Context-Aware Processing**: The system intelligently maintains conversation context to provide more relevant and accurate responses.
 * **Optimized Prompting**: Carefully crafted system prompts ensure the AI provides accurate Web3 information and function calls.
@@ -157,7 +158,7 @@ graph TD;
     </tr>
     <tr>
       <td>AI Integration</td>
-      <td>Custom service layer for interacting with LLMs (OpenAI) and specialized Web3 models (Flock)</td>
+      <td>Custom service layer for interacting with LLMs (OpenAI), Qwen LLM (via Gaia AI), and specialized Web3 models (Flock)</td>
     </tr>
     <tr>
       <td>UI Enhancements</td>
@@ -193,8 +194,72 @@ graph TD;
    ```env
    REACT_APP_OPENAI_API_KEY=your_openai_api_key
    REACT_APP_REPLICATE_API_KEY=your_replicate_api_key
+   REACT_APP_GAIA_API_KEY=your_gaia_api_key
    # Add other variables as needed
    ```
+
+   **Getting a Gaia API Key:**
+   - For testing, you can use Gaia's public endpoint with the default API key:
+     ```
+     API endpoint: https://llama70b.gaia.domains/v1
+     API Key: gaia
+     ```
+   - For production use, visit [Gaia's website](https://www.gaianet.ai/) to create an account and obtain a dedicated API key
+   - Alternatively, you can [run your own Gaia node](https://github.com/GaiaNet-AI/gaianet-node) for complete control and customization
+
+## 🧠 Self-Hosting Qwen LLM via Gaia Node
+
+For users who prefer to run the Qwen LLM locally rather than using public API endpoints, AxiosChat supports integration with self-hosted Gaia nodes. This approach provides enhanced privacy, reduced latency, and complete control over your AI model.
+
+### Setting Up Your Gaia Node with Qwen LLM
+
+1. **Install the Gaia Node Software**:
+   ```bash
+   curl -sSfL 'https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh' | bash
+   ```
+   Follow the on-screen prompts to complete installation.
+
+2. **Configure for Qwen LLM**:
+   Update your node configuration to use Qwen LLM:
+   ```bash
+   gaianet config --chat-url "https://huggingface.co/gaianet/qwen3-8b-GGUF/resolve/main/qwen3-8b-Q5_K_M.gguf"
+   gaianet config --prompt-template "qwen3"
+   ```
+
+3. **Initialize and Start Your Node**:
+   ```bash
+   gaianet init
+   gaianet start
+   ```
+   
+4. **Connect AxiosChat to Your Local Node**:
+   After starting your node, it will display a URL in the format:
+   ```
+   https://[node-id].gaia.domains/v1
+   ```
+   Add this URL to your `.env` file:
+   ```
+   REACT_APP_GAIA_API_ENDPOINT=https://[node-id].gaia.domains/v1
+   REACT_APP_GAIA_API_KEY=gaia
+   ```
+
+### Benefits of Self-Hosting
+
+- **Privacy**: Your data remains within your infrastructure
+- **Customization**: Fine-tune the model for your specific use cases
+- **Reliability**: No dependence on external API availability
+- **Cost-effective**: No usage-based API charges for high-volume applications
+
+### System Requirements
+
+To run Qwen LLM models effectively via a Gaia node, the following minimum specifications are recommended:
+
+- **CPU**: 8+ cores
+- **RAM**: 16GB minimum (32GB recommended)
+- **Storage**: 20GB free space
+- **GPU**: NVIDIA GPU with 8GB+ VRAM (optional but recommended for better performance)
+
+For a complete guide to running specialized versions of Qwen (like Qwen Coder) or configuring advanced features, refer to the [Gaia documentation](https://docs.gaianet.ai/).
 
 4. **Run the Development Server**:
    ```bash
