@@ -292,5 +292,3 @@ This project is licensed under the [MIT License](LICENSE).
     <a href="https://github.com/OkeyAmy/AxiosChat/issues">Request Feature</a>
   </p>
 </div>
-
-## The Deomo video is the uppadted video for the AxoisChat demo destrating how gaia network it ustlized in the application 
