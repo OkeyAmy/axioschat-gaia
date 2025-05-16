@@ -282,7 +282,7 @@ For a complete guide to running specialized versions of Qwen (like Qwen Coder) o
 ## 🔮 Future Roadmap & Vision
 
 * **Phase 1 (Achieved & Enhanced)**: Core conversational AI, Web3 function calling, robust UI, secure transaction handling, support for Ethereum.
-* **Phase 2**: Expansion to additional EVM chains (e.g., Polygon, BNB Chain, Arbitrum) and popular L2s.
+* **Phase 2**: Expansion to additional EVM chains and popular L2s.
 * **Phase 3**: Deeper DeFi integrations (e.g., interacting with specific lending protocols, yield aggregators via natural language), NFT management.
 * **Phase 4**: Browser extension for in-context Web3 assistance and a dedicated mobile application.
 * **Phase 5**: Advanced learning path system with customized, interactive tutorials based on user knowledge level and interests.
