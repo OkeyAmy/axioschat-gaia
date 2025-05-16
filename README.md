@@ -121,7 +121,7 @@ AxiosChat isn't just another chatbot. It's a **thoughtfully engineered solution*
 
 AxiosChat employs a sophisticated dual-model AI architecture:
 
-1. **Conversational LLM (OpenAI)**: Manages the primary user interaction, understands intent, and determines if a Web3-specific action is required.
+1. **Conversational LLM (GAIA Network AI(qwen72b)**: Manages the primary user interaction, understands intent, and determines if a Web3-specific action is required.
 2. **Specialized Web3 AI Model (Flock)**: If a Web3 action is needed, this model interprets the request to identify the precise blockchain function and its parameters.
 
 This system intelligently differentiates between:
@@ -205,7 +205,6 @@ graph TD;
 3. **Configure Environment Variables**:
    Create a `.env` file in the root directory and populate it with your API keys:
    ```env
-   REACT_APP_OPENAI_API_KEY=your_openai_api_key
    REACT_APP_REPLICATE_API_KEY=your_replicate_api_key
    REACT_APP_GAIA_API_KEY=your_gaia_api_key
    # Add other variables as needed
